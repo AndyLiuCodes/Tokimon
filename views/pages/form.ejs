@@ -1,0 +1,41 @@
+<!DOCTYpE html>
+
+<html>
+
+<head>
+    <% include ../partials/formHeader.ejs %>
+</head>
+
+<body>
+    <script type="text/javascript">if(<%=hi%> == 1){alert("Success")}</script>
+    
+    <div id="title">
+        <h1 class="outTitle">Add a New Tokimon</h1>
+        <div>
+            <h1 class="innerTitle">Add a New Tokimon</h1>
+        </div>
+    </div>
+    <div id="contentDiv">
+        <div id="formDiv">
+            <form method="post" action="/insert" novalidate>
+                <p>Tokimon Name:</p><input class="input" type="text" name="name" required><br>
+                <p>Weight:</p><input class="input" type="number" name="weight" required><br>
+                <p>Height:</p><input class="input" type="number" name="height" required><br>
+                <p>Fly:</p><input class="input" type="number" name="fly" min="0"><br>
+                <p>Fight:</p><input class="input" type="number" name="fight"><br>
+                <p>Fire:</p><input class="input" type="number" name="fire"><br>
+                <p>Water:</p><input class="input" type="number" name="water"><br>
+                <p>Electric:</p><input class="input" type="number" name="electric"><br>
+                <p>Ice:</p><input class="input" type="number" name="ice"><br>
+                <p>Trainer Name:</p><input class="input" type="number" name="trainer" required><br>
+                <p>Description:</p><input class="input" type="text" name="description"><br>
+                <input type="submit" value="Submit" id="submitBut">
+            </form>
+            <div id="backDiv">
+                <a href="/"><button id="backBut" href="">Go Back</button></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
