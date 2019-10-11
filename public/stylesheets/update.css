@@ -1,0 +1,112 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+}
+body {
+    height: 100%;
+    background-color: #727272;
+    background-image: repeating-linear-gradient(-45deg, #6a6a6a 0, #6a6a6a 2px, #727272 2px, #727272 11px);
+    background-size: 16px 16px;
+}
+
+html{
+    height: 100%;
+    overflow: hidden;
+}
+
+#title{
+    text-align: center; 
+    height: 5%;
+    width: 100%; 
+}
+
+.outTitle{
+    position: relative;
+    margin: 0 auto;
+    text-align:center;
+    font-family: "pokemon";
+    color: #eed535;
+    font-size: 60px;    
+}
+
+.innerTitle{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    font-family: "pokemonout";
+    color: #1c557a;
+    font-size: 60px; 
+    font-weight: 900;
+}
+
+@font-face {
+    font-family: "pokemon";
+    src: url("../font/Pokemon\ Solid.ttf");
+}
+@font-face {
+    font-family: "pokemonout";
+    src: url("../font/Pokemon\ Hollow.ttf")
+}
+
+#contentDiv{
+    position: relative;
+    margin: 0 auto;
+    width: 100%;
+    height:  70%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#formDiv{
+    width: 70%;
+    height: 100%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #4b5320;
+    border-radius: 5px;
+    border: 4px solid #000;
+}
+
+#formDiv p {
+    display: inline-block;
+    width: 200px;
+    text-align: right;
+    font-size: 20px;
+    font-family: Google Sans,Roboto,Arial,sans-serif;
+    color: white;
+    padding-top:20px;
+    padding-right: 20px;
+}
+
+.input{
+    text-decoration: none;
+    border-radius: 5px;
+    width: 40%;
+    height: 25px;
+    font-size: 20px;
+}
+
+#submitBut{
+    margin-top: 20px;
+    width: 20%;
+    height: 30px;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
+
+#backDiv{
+    position: relative;
+    bottom: 27px;
+    left: 0;
+    width: 30%;
+}
+
+#backBut{
+    height: 60%;
+    width: 50%;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+}
