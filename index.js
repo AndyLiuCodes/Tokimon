@@ -33,7 +33,6 @@ express()
         res.render('pages/display')
       }
       let results = {numRows: result.rowCount, data: result.rows}
-      console.log(results.data)
       res.render('pages/display', results)
     })
     
@@ -48,9 +47,22 @@ express()
   })
 
   .get("/delete", function(req, res){
-    res.render('pages/form')
+    let displayQuery = "select * from tokimon"
+    pool.query(displayQuery, function(err, result){
+      if(err){
+        console.log(err)
+        res.render('pages/display')
+      }
+      let results = {numRows: result.rowCount, data: result.rows}
+      console.log(results.data)
+      res.render('pages/delete', results)
+    })
   })
 
+  .get("/delete/:id", function(req, res){
+    pool.query(`DELETE from tokimon where id = ${req.params.id}`)
+    res.redirect("/display")
+  })
   .post("/insert", function(req, res){
     console.log(req.body);
     let description = req.body.description

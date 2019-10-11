@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <% include ../partials/deleteHead.ejs %>
+</head>
+
+<body>
+    <div id="title">
+        <h1 class="outTitle">Tokimon</h1>
+        <div>
+            <h1 class="innerTitle">Tokimon</h1>
+        </div>
+    </div>
+    <div id="contentDiv">
+        <div id="outerTokidex">
+            <div id="innerTokidex">
+                <div id="displayContent">
+                    <div id="scroll">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Weight</th>
+                                    <th>Height</th>
+                                    <th>Fly</th>
+                                    <th>Fight</th>
+                                    <th>Fire</th>
+                                    <th>Water</th>
+                                    <th>Electric</th>
+                                    <th>Ice</th>
+                                    <th>DELETE</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                                <% data.forEach(function(e){ %>
+                                <tr>
+                                    <td><%=e.name%></td>
+                                    <td><%=e.weight%></td>
+                                    <td><%=e.height%></td>
+                                    <td><%=e.fly%></td>
+                                    <td><%=e.fight%></td>
+                                    <td><%=e.fire%></td>
+                                    <td><%=e.water%></td>
+                                    <td><%=e.electric%></td>
+                                    <td><%=e.ice%></td>
+                                    <td id = "deleteCell"><a href="/delete/<%=e.id%>">Delete</a></td>
+                                </tr>
+                                <%}) %>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div id="buttonNav">
+                    <h2 id="tokidexOut">Tokidex</h2>
+                    <div>
+                        <h2 id="tokidexIn">Tokidex</h2>
+                    </div>
+                    <a href="/display"><button>Go back to Display</button></a>
+                    <a href="/new"><button>Add New Tokimon</button></a>
+                    <a href="/edit"><button>Edit a Tokimon</button></a>
+                    <a href="/delete"><button>Delete a Tokimon</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
