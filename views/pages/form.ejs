@@ -7,7 +7,59 @@
 </head>
 
 <body>
-    <script type="text/javascript">if(<%=hi%> == 1){alert("Success")}</script>
+    <script type="text/javascript">
+    if(<%=success%> == 1){
+        alert("ERROR: Invalid name for Tokimon, check if the name is empty or if the name only contains letters")
+    }
+    else if(<%=success%> == 2){
+        alert("ERROR: Weight is either empty or contains a value less than or equal to 0, please try again")
+    }
+    else if(<%=success%> == 3){
+        alert("ERROR: Height is either empty or contains a value less than or equal to 0, please try again")
+    }
+    else if(<%=success%> == 4){
+        alert("ERROR: The fly attribute is either empty or you entered in a float value, please enter in only integer numbers between 0 and 100")
+    }
+    else if(<%=success%> == 5){
+        alert("ERROR: You entered in a value for the fly attribute that is either greater than 100 or less than 0, please enter in only integer numbers between 0 and 100")
+    }
+    else if(<%=success%> == 6){
+        alert("ERROR: The fight attribute is either empty or you entered in a float value, please enter in only integer numbers between 0 and 100")
+    }
+    else if(<%=success%> == 7){
+        alert("ERROR: You entered in a value for the fight attribute that is either greater than 100 or less than 0, please enter in only integer numbers between 0 and 100")
+    }
+    else if(<%=success%> == 8){
+        alert("ERROR: The fire attribute is either empty or you entered in a float value, please enter in only integer numbers between 0 and 100")
+    }
+    else if(<%=success%> == 9){
+        alert("ERROR: You entered in a value for the fire attribute that is either greater than 100 or less than 0, please enter in only integer numbers between 0 and 100")
+    }
+    else if(<%=success%> == 10){
+        alert("ERROR: The water attribute is either empty or you entered in a float value, please enter in only integer numbers between 0 and 100")
+    }
+    else if(<%=success%> == 11){
+        alert("ERROR: You entered in a value for the water attribute that is either greater than 100 or less than 0, please enter in only integer numbers between 0 and 100")
+    }
+    else if(<%=success%> == 12){
+        alert("ERROR: The electric attribute is either empty or you entered in a float value, please enter in only integer numbers between 0 and 100")
+    }
+    else if(<%=success%> == 13){
+        alert("ERROR: You entered in a value for the electric attribute that is either greater than 100 or less than 0, please enter in only integer numbers between 0 and 100")
+    }
+    else if(<%=success%> == 14){
+        alert("ERROR: The ice attribute is either empty or you entered in a float value, please enter in only integer numbers between 0 and 100")
+    }
+    else if(<%=success%> == 15){
+        alert("ERROR: You entered in a value for the ice attribute that is either greater than 100 or less than 0, please enter in only integer numbers between 0 and 100")
+    }
+    else if(<%=success%> == 16){
+        alert("ERROR: invalid name for trainer, please check if the trainer name is not empty or if it only contains letters")
+    }
+    else if(<%=success%> == 17){
+        alert("SUCCESS: Your  entry into the Tokidex is complete!")
+    }
+    </script> <!--Put if statements for errors lmao-->
     
     <div id="title">
         <h1 class="outTitle">Add a New Tokimon</h1>
@@ -27,7 +79,7 @@
                 <p>Water:</p><input class="input" type="number" name="water"><br>
                 <p>Electric:</p><input class="input" type="number" name="electric"><br>
                 <p>Ice:</p><input class="input" type="number" name="ice"><br>
-                <p>Trainer Name:</p><input class="input" type="number" name="trainer" required><br>
+                <p>Trainer Name:</p><input class="input" type="text" name="trainer" required><br>
                 <p>Description:</p><input class="input" type="text" name="description"><br>
                 <input type="submit" value="Submit" id="submitBut">
             </form>
