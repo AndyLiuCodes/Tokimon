@@ -1,0 +1,38 @@
+<!DOCTYpE html>
+
+<html>
+
+<head>
+    <% include ../partials/infoHead.ejs %>
+</head>
+
+<body>
+    <div id="title">
+        <h1 class="outTitle">Info About <%= data[0].name %></h1>
+        <div>
+            <h1 class="innerTitle">Info About <%= data[0].name %></h1>
+        </div>
+    </div>
+    <div id="contentDiv">
+        <div id="formDiv">
+            <label>Tokimon Name: </label><p><%= data[0].name %></p><br>
+            <label>Weight:</label><p><%= data[0].weight %></p><br>
+            <label>Height:</label><p><%= data[0].height %></p><br>
+            <label>Fly:</label><p><%= data[0].fly %></p><br>
+            <label>Fight:</label><p><%= data[0].fight %></p><br>
+            <label>Fire:</label><p><%= data[0].fire %></p><br>
+            <label>Water:</label><p><%= data[0].water %></p><br>
+            <label>Electric:</label><p><%= data[0].electric %></p><br>
+            <label>Ice:</label><p><%= data[0].ice %></p><br>
+            <label>Attribute Total:</label><p><%= data[0].total %></p><br>
+            <label>Trainer Name:</label><p><%= data[0].trainer %></p><br>
+            <label>Description:</label><p><%= data[0].description %></p><br>
+            
+            <div id="backDiv">
+                <a href="/display"><button id="backBut">Go Back</button></a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

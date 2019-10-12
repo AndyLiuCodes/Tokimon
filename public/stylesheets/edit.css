@@ -175,6 +175,6 @@ a:hover{
     cursor:pointer;
 }
 
-#editCell{
+#editCell, #infoCell{
     padding: 4px;
 }

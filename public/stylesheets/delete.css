@@ -175,6 +175,6 @@ a:hover{
     cursor:pointer;
 }
 
-#deleteCell{
+#deleteCell, #infoCell{
     padding: 4px;
 }

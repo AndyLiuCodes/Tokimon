@@ -30,6 +30,7 @@
                                     <th>Water</th>
                                     <th>Electric</th>
                                     <th>Ice</th>
+                                    <th>More Info</th>
                                 </tr>
                             </thead>
 
@@ -45,6 +46,7 @@
                                     <td><%=e.water%></td>
                                     <td><%=e.electric%></td>
                                     <td><%=e.ice%></td>
+                                    <td id = "infoCell"><a href="/info/<%=e.id%>">More Info</a></td>
                                 </tr>
                                 <%}) %>
                             </tbody>

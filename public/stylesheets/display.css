@@ -157,3 +157,24 @@ thead{
     overflow-y: scroll;
     height: 97%;
 }
+
+table a{
+    text-decoration: none;
+    color: black;
+    padding: 2px 8px;
+    border: 1px solid white;
+    border-radius: 10px;
+    background-color: buttonface;
+    font-size: 13px;
+    font-family: "pokemon";
+}
+
+a:hover{
+    color: black;
+    text-decoration: none;
+    cursor:pointer;
+}
+
+#infoCell{
+    padding: 4px;
+}

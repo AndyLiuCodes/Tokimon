@@ -37,10 +37,24 @@ express()
     })
 
   })
+
+  .get("/info/:id", function(req, res){
+    let moreInfoQuery = `select * from tokimon where id = ${req.params.id}`
+    pool.query(moreInfoQuery, function(err, result){
+      if (err){
+        console.log(err)
+        res.render('pages/display')
+      }
+
+      let results = {data: result.rows}
+      res.render('pages/info', results)
+    })
+  })
   .get("/new", function (req, res) {
     let result = { success: 0}
     res.render('pages/form', result)
   })
+
 
   .get("/edit", function (req, res) {
     let editQuery = "select * from tokimon"
@@ -74,6 +88,8 @@ express()
       res.render('pages/update', results)
     })
   })
+
+
   .get("/delete", function (req, res) {
     let deleteQuery = "select * from tokimon"
     pool.query(deleteQuery, function (err, result) {
@@ -91,6 +107,7 @@ express()
     pool.query(`DELETE from tokimon where id = ${req.params.id}`)
     res.redirect("/display")
   })
+
   .post("/insert", function (req, res) {
     let description = req.body.description
 
@@ -127,4 +144,6 @@ express()
     let result = { success: 3 }
     res.render('pages/form', result)
   })
+
+  
   .listen(PORT, () => console.log(`Listening on ${PORT}`))
