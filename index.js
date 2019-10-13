@@ -6,7 +6,6 @@ const { Pool, Client } = require('pg')
 const connectionString = "postgres://postgres:root@localhost/tokimon"
 var pool = new Pool({
   connectionString: process.env.DATABASE_URL
-  ssl: true
 })
 
 express()
