@@ -23,6 +23,12 @@ html, body{
     overflow: hidden;
 }
 
+html{
+    min-width: 976px;
+    min-height: 859px;
+    overflow: scroll;
+}
+
 #title{
     text-align: center; 
     height: 25%;
@@ -35,7 +41,8 @@ html, body{
     text-align:center;
     font-family: "pokemon";
     color: #eed535;
-    font-size: 60px;    
+    font-size: 60px;   
+    min-width: 976px; 
 }
 
 .innerTitle{
@@ -46,6 +53,7 @@ html, body{
     color: #1c557a;
     font-size: 60px; 
     font-weight: 900;
+    min-width: 976px;
 }
 
 #contentDiv{

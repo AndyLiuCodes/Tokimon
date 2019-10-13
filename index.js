@@ -3,7 +3,6 @@ const path = require('path')
 const PORT = process.env.PORT || 5000
 const { Pool, Client } = require('pg')
 
-const connectionString = "postgres://postgres:root@localhost/tokimon"
 var pool = new Pool({
   connectionString: process.env.DATABASE_URL
 })
@@ -13,7 +12,6 @@ express()
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'ejs')
   .use(express.urlencoded({ extended: false }))
-  //done
   .get('/db', async (req, res) => {
     try {
       const client = await pool.connect()
@@ -26,7 +24,7 @@ express()
       res.send("Error " + err);
     }
   })
-  
+  //done
   .get("/", function (req, res) {
     let result = {success: 0}
     res.render("pages/index", result)
