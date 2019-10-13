@@ -6,6 +6,7 @@ const { Pool, Client } = require('pg')
 const connectionString = "postgres://postgres:root@localhost/tokimon"
 var pool = new Pool({
   connectionString: process.env.DATABASE_URL
+  ssl: true
 })
 
 express()
@@ -14,6 +15,19 @@ express()
   .set('view engine', 'ejs')
   .use(express.urlencoded({ extended: false }))
   //done
+  .get('/db', async (req, res) => {
+    try {
+      const client = await pool.connect()
+      const result = await client.query('SELECT * FROM test_table');
+      const results = { 'results': (result) ? result.rows : null};
+      res.render('pages/db', results );
+      client.release();
+    } catch (err) {
+      console.error(err);
+      res.send("Error " + err);
+    }
+  })
+  
   .get("/", function (req, res) {
     let result = {success: 0}
     res.render("pages/index", result)
@@ -73,7 +87,7 @@ express()
       }
       info = {
         name: result.rows[0].name, weight: result.rows[0].weight, height: result.rows[0].height, fly: result.rows[0].fly, fight: result.rows[0].fight,
-        fire: result.rows[0].fire, water: result.rows[0].water, electric: result.rows[0].electric, ice: result.rows[0].ice, trainer: result.rows[0].trainer, description: result.rows[0].trainer, id: result.rows[0].id
+        fire: result.rows[0].fire, water: result.rows[0].water, electric: result.rows[0].electric, ice: result.rows[0].ice, trainer: result.rows[0].trainer, description: result.rows[0].description, id: result.rows[0].id
       }
       let results = {success: 0, data: info}
       res.render('pages/update', results)
