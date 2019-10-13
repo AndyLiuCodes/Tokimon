@@ -34,6 +34,17 @@
       </div>
     </div>
   </div>
+  <script>
+    if(<%=success%> == 1){
+        alert("SUCCESS: The Tokimon was successfully edited")
+    }
+    else if(<%=success%> == 2){
+        alert("SUCCESS: The Tokimon was successfully deleted")
+    }
+    else if (<%= success %> == 3) {
+            alert("SUCCESS: Your  entry into the Tokidex is complete!")
+    }
+    </script>
 </body>
 
 </html>

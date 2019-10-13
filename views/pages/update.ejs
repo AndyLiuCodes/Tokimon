@@ -7,43 +7,45 @@
 </head>
 
 <body>
-    <script type="text/javascript">
-        if (<%= success %> == 1) {
-            alert("ERROR: Invalid name for Tokimon, check if the name is empty or if the name only contains letters")
-        }
-    else if (<%= success %> == 2) {
-            alert("ERROR: invalid name for trainer, please check if the trainer name is not empty or if it only contains letters")
-        }
-    else if (<%= success %> == 3) {
-            alert("SUCCESS: Your  entry into the Tokidex is complete!")
-        }
-    </script>
-    <!--Put if statements for errors lmao-->
-
     <div id="title">
-        <h1 class="outTitle">Add a New Tokimon</h1>
+        <h1 class="outTitle">Editing Tokimon</h1>
         <div>
-            <h1 class="innerTitle">Add a New Tokimon</h1>
+            <h1 class="innerTitle">Editing Tokimon</h1>
         </div>
     </div>
     <div id="contentDiv">
         <div id="formDiv">
-            <form method="post" action="/insert">
-                <p>Tokimon Name:</p><input class="input" type="text" name="name" value="" required><br>
-                <p>Weight:</p><input class="input" type="number" name="weight" value="" min="0" required><br>
-                <p>Height:</p><input class="input" type="number" name="height" value="" min="0" required><br>
-                <p>Fly:</p><input class="input" type="number" name="fly" min="0" max="100" value="" required><br>
-                <p>Fight:</p><input class="input" type="number" name="fight" min="0" max="100" value="" required><br>
-                <p>Fire:</p><input class="input" type="number" name="fire" min="0" max="100" value="" required><br>
-                <p>Water:</p><input class=" input" type="number" name="water" min="0" max="100" value="" required><br>
-                <p>Electric:</p><input class="input" type="number" name="electric" min="0" max="100" value="" required><br>
-                <p>Ice:</p><input class="input" type="number" name="ice" min="0" max="100" value="" required><br>
-                <p>Trainer Name:</p><input class="input" type="text" name="trainer" value="" required><br>
-                <p>Description:</p><input class="input" type="text" name="description" value=""><br>
-                <input type="submit" value="Submit" id="submitBut">
+            <form method="post" action="/update/<%=data.id%>">
+                <p>Tokimon Name:</p><input class="input" type="text" name="name" value="<%=data.name%>"
+                    pattern="^([a-zA-Z]+\s)*[a-zA-Z]+\s+$"
+                    title="Tokimon name should only contain alphabetical characters or have a single space between words"
+                    required><br>
+                <p>Weight:</p><input class="input" type="number" name="weight" value="<%=data.weight%>" min="0"
+                    required><br>
+                <p>Height:</p><input class="input" type="number" name="height" value="<%=data.height%>" min="0"
+                    required><br>
+                <p>Fly:</p><input class="input" type="number" name="fly" min="0" max="100" value="<%=data.fly%>"
+                    required><br>
+                <p>Fight:</p><input class="input" type="number" name="fight" min="0" max="100" value="<%=data.fight%>"
+                    required><br>
+                <p>Fire:</p><input class="input" type="number" name="fire" min="0" max="100" value="<%=data.fire%>"
+                    required><br>
+                <p>Water:</p><input class=" input" type="number" name="water" min="0" max="100" value="<%=data.water%>"
+                    required><br>
+                <p>Electric:</p><input class="input" type="number" name="electric" min="0" max="100"
+                    value="<%=data.electric%>" required><br>
+                <p>Ice:</p><input class="input" type="number" name="ice" min="0" max="100" value="<%=data.ice%>"
+                    required><br>
+                <p>Trainer Name:</p><input class="input" type="text" name="trainer" value="<%=data.trainer%>"
+                    pattern="^([a-zA-Z]+\s)*[a-zA-Z]+\s+$"
+                    title="Trainer name should only contain alphabetical characters or have a single space between words"
+                    required><br>
+                <p>Description:</p><input class="input" type="text" name="description"
+                    value="<%=data.description%>"><br>
+                <input type="submit" value="Update" id="submitBut">
             </form>
             <div id="backDiv">
-                <a href="/"><button id="backBut">Go Back</button></a>
+                <a href="/edit"><button id="backBut">Go Back</button></a>
             </div>
         </div>
     </div>
