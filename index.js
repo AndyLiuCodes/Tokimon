@@ -319,7 +319,7 @@ express()
     let ice = parseInt(req.body.ice)
     let trainer = req.body.trainer
     let total = fly + fight + fire + water + electric + ice
-    var insertQuery = `update tokimon set name='${tokiName.toLowerCase().trim()}', weight = ${weight}, height = ${height}, fly = ${fly}, fight = ${fight}, fire = ${fire}, water = ${water}, electric = ${electric}, ice = ${ice}, total = ${total}, trainer = '${trainer.toLowerCase()}', description = '${description}' where id = ${req.params.id}`
+    var insertQuery = `update tokimon set name='${tokiName.toLowerCase().trim()}', weight = ${weight}, height = ${height}, fly = ${fly}, fight = ${fight}, fire = ${fire}, water = ${water}, electric = ${electric}, ice = ${ice}, total = ${total}, trainer = '${trainer.toLowerCase().trim()}', description = '${description}' where id = ${req.params.id}`
 
     pool.query(insertQuery, function (err, res) {
       if (err) {
