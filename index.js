@@ -378,6 +378,42 @@ express()
     res.render('pages/index', result)
   })
   //done
+  .get("/compare1", function(req, res){
+    let compareQuery = "select * from tokimon order by id ASC"
+    pool.query(compareQuery, function (err, result) {
+      if (err) {
+        console.log(err)
+        res.render('pages/display')
+      }
+      let results = { numRows: result.rowCount, data: result.rows }
+      res.render('pages/compare1', results)
+    })
+  })
+  //done
+  .get("/compare1/:id", function(req, res){
+    let compareQuery = "select * from tokimon order by id ASC"
+    pool.query(compareQuery, function (err, result) {
+      if (err) {
+        console.log(err)
+        res.render('pages/display')
+      }
+      let results = { numRows: result.rowCount, data: result.rows, choice1: req.params.id}
+      res.render('pages/compare2', results)
+    })
+  })
+  .get("/compare/:idf/:id", function(req, res){
+    let compareQuery = `select * from tokimon where id = ${req.params.idf} union all select * from tokimon where id = ${req.params.id}`
+    pool.query(compareQuery, function(err, result){
+      if(err){
+        console.log(err)
+        res.redirect("*")
+      }
+      
+      let results = {data: result.rows}
+      res.render('pages/comparison', results)
+    })
+  })
+  //done
   .get('*', function(req, res){
     res.status(404).send('ERROR 404: The page you requested is invalid or is missing, please try something else')
   })

@@ -57,7 +57,7 @@
                                     <th>Electric</th>
                                     <th>Ice</th>
                                     <th>More Info</th>
-                                    <th>Edit</th>
+                                    <th>Compare</th>
                                 </tr>
                             </thead>
 
@@ -74,7 +74,7 @@
                                     <td><%=e.electric%></td>
                                     <td><%=e.ice%></td>
                                     <td id = "infoCell"><a href="/info/<%=e.id%>">More Info</a></td>
-                                    <td id = "editCell"><a href="/edit/<%=e.id%>">Edit</a></td>
+                                    <td id = "editCell"><a href="/compare/<%=choice1%>/<%=e.id%>">Compare(2nd Choice)</a></td>
                                 </tr>
                                 <%}) %>
                             </tbody>
@@ -90,7 +90,7 @@
                     <a href="/new"><button>Add New Tokimon</button></a>
                     <a href="/edit"><button>Edit a Tokimon</button></a>
                     <a href="/delete"><button>Delete a Tokimon</button></a>
-                    <a href="/compare1"><button>Compare Two Tokimons</button></a>
+                    <a href="/display"><button>Cancel Comparison</button></a>
                 </div>
             </div>
         </div>

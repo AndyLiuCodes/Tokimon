@@ -13,6 +13,32 @@
             <h1 class="innerTitle">Tokimon</h1>
         </div>
     </div>
+    <form id="sortForm" action="/sort" method="get">
+        <label>Sort Tokidex Entries By:</label>
+        <select name="Sort" id="myList">
+            <option value="1" selected="selected">Time Added: Oldest to recent</option>
+            <option value="2">Time Added: Recent to Old</option>
+            <option value="3">Name: A to Z</option>
+            <option value="4">Name: Z to A</option>
+            <option value="5">Weight: Lightest to Heaviest</option>
+            <option value="6">Weight: Heaviest to Lightest</option>
+            <option value="7">Height: Shortest to Tallest</option>
+            <option value="8">Height: Tallest to Shortest</option>
+            <option value="9">Fly: Lowest to Highest</option>
+            <option value="10">Fly: Highest to Lowest</option>
+            <option value="11">Fight: Lowest to Highest</option>
+            <option value="12">Fight: Highest to Lowest</option>
+            <option value="13">Fire: Lowest to Highest</option>
+            <option value="14">Fire: Highest to Lowest</option>
+            <option value="15">Water: Lowest to Highest</option>
+            <option value="16">Water: Highest to Lowest</option>
+            <option value="17">Electric: Lowest to Highest</option>
+            <option value="18">Electric: Highest to Lowest</option>
+            <option value="19">Ice: Lowest to Highest</option>
+            <option value="20">Ice: Highest to Lowest</option>
+        </select>
+        <input id="sortBut" type="submit" value="Sort the Table">
+    </form>
     <div id="contentDiv">
         <div id="outerTokidex">
             <div id="innerTokidex">
@@ -64,6 +90,7 @@
                     <a href="/new"><button>Add New Tokimon</button></a>
                     <a href="/edit"><button>Edit a Tokimon</button></a>
                     <a href="/delete"><button>Delete a Tokimon</button></a>
+                    <a href="/compare1"><button>Compare Two Tokimons</button></a>
                 </div>
             </div>
         </div>

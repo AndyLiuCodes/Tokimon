@@ -24,7 +24,7 @@ html, body{
 }
 
 html{
-    min-width: 976px;
+    min-width: 1565px;
     min-height: 859px;
     overflow: scroll;
 }
@@ -42,7 +42,7 @@ html{
     font-family: "pokemon";
     color: #eed535;
     font-size: 60px;    
-    min-width: 976px;
+    min-width: 1565px;
 }
 
 .innerTitle{
@@ -53,7 +53,7 @@ html{
     color: #1c557a;
     font-size: 60px; 
     font-weight: 900;
-    min-width: 976px;
+    min-width: 1565px;
 }
 
 #contentDiv{
@@ -80,7 +80,7 @@ html{
 }
 
 #displayContent{
-    height: 85%;
+    height: 80%;
     width: 80%;
     background-color: #4b5320;
     position: relative;
@@ -126,7 +126,7 @@ button {
     margin-bottom: 25px;
     margin-left: auto;
     margin-right: auto;
-    height: 60px;
+    height: 50px;
     width: 100%;
     border-radius: 20px;
     font-family: "pokemon";
@@ -191,7 +191,11 @@ a:hover{
 
 #sortForm{
     position: relative;
-    top: 3%;
+    display: block;
+    float: left;
+    max-width: 500px;
+    top: 4%;
+    left: 40%;
 }
 label {
     position: relative;

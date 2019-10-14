@@ -1,0 +1,52 @@
+<!DOCTYpE html>
+
+<html>
+
+<head>
+    <% include ../partials/compare.ejs %>
+</head>
+
+<body>
+    <div id="title">
+        <h1 class="outTitle">Comparison</h1>
+        <div>
+            <h1 class="innerTitle">Comparison</h1>
+        </div>
+    </div>
+    <div id="contentDiv">
+        <div class="formDiv">
+            <label>Tokimon Name: </label><p><%= data[0].name %></p><br>
+            <label>Weight:</label><p><%= data[0].weight %></p><br>
+            <label>Height:</label><p><%= data[0].height %></p><br>
+            <label>Fly:</label><p><%= data[0].fly %></p><br>
+            <label>Fight:</label><p><%= data[0].fight %></p><br>
+            <label>Fire:</label><p><%= data[0].fire %></p><br>
+            <label>Water:</label><p><%= data[0].water %></p><br>
+            <label>Electric:</label><p><%= data[0].electric %></p><br>
+            <label>Ice:</label><p><%= data[0].ice %></p><br>
+            <label>Attribute Total:</label><p><%= data[0].total %></p><br>
+            <label>Trainer Name:</label><p><%= data[0].trainer %></p><br>
+            <label>Description:</label><p><%= data[0].description %></p><br>
+            
+            <div id="backDiv">
+                <a href="/display"><button id="backBut">Go Back</button></a>
+            </div>
+        </div>
+        <div class="formDiv">
+                <label>Tokimon Name: </label><p><%= data[1].name %></p><br>
+                <label>Weight:</label><p><%= data[1].weight %></p><br>
+                <label>Height:</label><p><%= data[1].height %></p><br>
+                <label>Fly:</label><p><%= data[1].fly %></p><br>
+                <label>Fight:</label><p><%= data[1].fight %></p><br>
+                <label>Fire:</label><p><%= data[1].fire %></p><br>
+                <label>Water:</label><p><%= data[1].water %></p><br>
+                <label>Electric:</label><p><%= data[1].electric %></p><br>
+                <label>Ice:</label><p><%= data[1].ice %></p><br>
+                <label>Attribute Total:</label><p><%= data[1].total %></p><br>
+                <label>Trainer Name:</label><p><%= data[1].trainer %></p><br>
+                <label>Description:</label><p><%= data[1].description %></p><br>
+            </div>
+    </div>
+</body>
+
+</html>
