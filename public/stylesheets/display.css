@@ -80,7 +80,7 @@ html{
 }
 
 #displayContent{
-    height: 90%;
+    height: 85%;
     width: 80%;
     background-color: #4b5320;
     position: relative;
@@ -123,7 +123,9 @@ html{
 
 button {
     display: block;
-    margin: 25px auto;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
     height: 60px;
     width: 100%;
     border-radius: 20px;
@@ -186,3 +188,24 @@ a:hover{
 #infoCell{
     padding: 4px;
 }
+
+#sortForm{
+    position: relative;
+    top: 3%;
+}
+label {
+    position: relative;
+    color: white;
+}
+
+#myList{
+    position: relative;
+    color: black;
+}
+
+#sortBut{
+    border-radius: 20px;
+    width: 120px;
+}
+
+#sortBut:focus {outline:0;}

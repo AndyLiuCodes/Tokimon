@@ -43,6 +43,216 @@ express()
 
   })
   //done
+  .get("/sort", function(req, res){
+    let sortOption = parseInt(req.query.Sort)
+    
+    if(sortOption == 1){
+      pool.query("select * from tokimon order by id asc", function(err, result){
+        if(err){
+          console.log(err)
+          res.end()
+        }
+        let results = { numRows: result.rowCount, data: result.rows }
+        res.render('pages/display', results)
+      })
+    }
+    else if(sortOption == 2){
+      pool.query("select * from tokimon order by id desc", function(err, result){
+        if(err){
+          console.log(err)
+          res.end()
+        }
+        let results = { numRows: result.rowCount, data: result.rows }
+        res.render('pages/display', results)
+      })
+    }
+    else if(sortOption == 3){
+      pool.query("select * from tokimon order by name asc", function(err, result){
+        if(err){
+          console.log(err)
+          res.end()
+        }
+        let results = { numRows: result.rowCount, data: result.rows }
+        res.render('pages/display', results)
+      })
+    }
+    else if(sortOption == 4){
+      pool.query("select * from tokimon order by name desc", function(err, result){
+        if(err){
+          console.log(err)
+          res.end()
+        }
+        let results = { numRows: result.rowCount, data: result.rows }
+        res.render('pages/display', results)
+      })
+    }
+    else if(sortOption == 5){
+      pool.query("select * from tokimon order by weight asc", function(err, result){
+        if(err){
+          console.log(err)
+          res.end()
+        }
+        let results = { numRows: result.rowCount, data: result.rows }
+        res.render('pages/display', results)
+      })
+    }
+    else if(sortOption == 6){
+      pool.query("select * from tokimon order by weight desc", function(err, result){
+        if(err){
+          console.log(err)
+          res.end()
+        }
+        let results = { numRows: result.rowCount, data: result.rows }
+        res.render('pages/display', results)
+      })
+    }
+    else if(sortOption == 7){
+      pool.query("select * from tokimon order by height asc", function(err, result){
+        if(err){
+          console.log(err)
+          res.end()
+        }
+        let results = { numRows: result.rowCount, data: result.rows }
+        res.render('pages/display', results)
+      })
+    }
+    else if(sortOption == 8){
+      pool.query("select * from tokimon order by height desc", function(err, result){
+        if(err){
+          console.log(err)
+          res.end()
+        }
+        let results = { numRows: result.rowCount, data: result.rows }
+        res.render('pages/display', results)
+      })
+    }
+    else if(sortOption == 9){
+      pool.query("select * from tokimon order by fly asc", function(err, result){
+        if(err){
+          console.log(err)
+          res.end()
+        }
+        let results = { numRows: result.rowCount, data: result.rows }
+        res.render('pages/display', results)
+      })
+    }
+    else if(sortOption == 10){
+      pool.query("select * from tokimon order by fly desc", function(err, result){
+        if(err){
+          console.log(err)
+          res.end()
+        }
+        let results = { numRows: result.rowCount, data: result.rows }
+        res.render('pages/display', results)
+      })
+    }
+    else if(sortOption == 11){
+      pool.query("select * from tokimon order by fight asc", function(err, result){
+        if(err){
+          console.log(err)
+          res.end()
+        }
+        let results = { numRows: result.rowCount, data: result.rows }
+        res.render('pages/display', results)
+      })
+    }
+    else if(sortOption == 12){
+      pool.query("select * from tokimon order by fight desc", function(err, result){
+        if(err){
+          console.log(err)
+          res.end()
+        }
+        let results = { numRows: result.rowCount, data: result.rows }
+        res.render('pages/display', results)
+      })
+    }
+    else if(sortOption == 13){
+      pool.query("select * from tokimon order by fire asc", function(err, result){
+        if(err){
+          console.log(err)
+          res.end()
+        }
+        let results = { numRows: result.rowCount, data: result.rows }
+        res.render('pages/display', results)
+      })
+    }
+    else if(sortOption == 14){
+      pool.query("select * from tokimon order by fire desc", function(err, result){
+        if(err){
+          console.log(err)
+          res.end()
+        }
+        let results = { numRows: result.rowCount, data: result.rows }
+        res.render('pages/display', results)
+      })
+    }
+    else if(sortOption == 15){
+      pool.query("select * from tokimon order by water asc", function(err, result){
+        if(err){
+          console.log(err)
+          res.end()
+        }
+        let results = { numRows: result.rowCount, data: result.rows }
+        res.render('pages/display', results)
+      })
+    }
+    else if(sortOption == 16){
+      pool.query("select * from tokimon order by water desc", function(err, result){
+        if(err){
+          console.log(err)
+          res.end()
+        }
+        let results = { numRows: result.rowCount, data: result.rows }
+        res.render('pages/display', results)
+      })
+    }
+    else if(sortOption == 17){
+      pool.query("select * from tokimon order by electric asc", function(err, result){
+        if(err){
+          console.log(err)
+          res.end()
+        }
+        let results = { numRows: result.rowCount, data: result.rows }
+        res.render('pages/display', results)
+      })
+    }
+    else if(sortOption == 18){
+      pool.query("select * from tokimon order by electric desc", function(err, result){
+        if(err){
+          console.log(err)
+          res.end()
+        }
+        let results = { numRows: result.rowCount, data: result.rows }
+        res.render('pages/display', results)
+      })
+    }
+    else if(sortOption == 19){
+      pool.query("select * from tokimon order by ice asc", function(err, result){
+        if(err){
+          console.log(err)
+          res.end()
+        }
+        let results = { numRows: result.rowCount, data: result.rows }
+        res.render('pages/display', results)
+      })
+    }
+    else if(sortOption == 20){
+      pool.query("select * from tokimon order by ice desc", function(err, result){
+        if(err){
+          console.log(err)
+          res.end()
+        }
+        let results = { numRows: result.rowCount, data: result.rows }
+        res.render('pages/display', results)
+      })
+    }
+    else{
+      res.redirect("/*")
+    }
+
+    
+  })
+  //done
   .get("/info/:id", function(req, res){
     let moreInfoQuery = `select * from tokimon where id = ${req.params.id}`
     pool.query(moreInfoQuery, function(err, result){
