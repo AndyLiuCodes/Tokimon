@@ -367,7 +367,7 @@ express()
     let ice = parseInt(req.body.ice)
     let trainer = req.body.trainer
     let total = fly + fight + fire + water + electric + ice
-    var insertQuery = `insert into tokimon values('${tokiName.toLowerCase().trim()}', ${weight}, ${height}, ${fly}, ${fight}, ${fire}, ${water}, ${electric}, ${ice}, ${total}, '${trainer.toLowerCase()}', '${description}')`
+    var insertQuery = `insert into tokimon values('${tokiName.toLowerCase().trim()}', ${weight}, ${height}, ${fly}, ${fight}, ${fire}, ${water}, ${electric}, ${ice}, ${total}, '${trainer.toLowerCase().trim()}', '${description}')`
     console.log(insertQuery)
     pool.query(insertQuery, function (err, res) {
       if (err) {
